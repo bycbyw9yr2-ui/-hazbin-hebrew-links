@@ -1,47 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hazbin Hotel בדיבוב לעברית</title>
+<title>Hazbin Hotel בעברית</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;font-family:Arial,sans-serif;background:radial-gradient(ellipse at top,#48131d,#101010 75%);color:white}
-main{width:min(100%,440px);text-align:center;padding:32px 24px;border:1px solid #652b34;border-radius:24px;background:#171416;box-shadow:0 18px 60px #0008}
-.logo{width:76px;height:76px;margin:auto auto 18px;display:grid;place-items:center;border-radius:50%;border:1px solid #e45b69;color:#ffd7dc;background:#42141c;font-size:27px;font-weight:bold}
-h1{font-size:30px;margin:0}
-p{color:#d6c6c8;line-height:1.7}
-#links{display:grid;gap:12px;margin-top:24px}
-a{display:block;padding:17px;border-radius:14px;background:#f2eeee;color:#211719;text-decoration:none;font-weight:bold}
-footer{font-size:12px;color:#a99b9d;margin-top:24px}
+body{margin:0;background:#100507;color:#fff;font-family:Arial,sans-serif;text-align:center}
+main{max-width:760px;margin:auto;padding:20px 14px 35px}
+h1{color:#ff343e;font-size:clamp(28px,7vw,48px);margin:16px 0}
+p{font-size:18px;line-height:1.7}
+.links{display:grid;gap:14px;margin:26px auto;max-width:420px}
+a{display:block;padding:16px;border:2px solid #e52a3b;border-radius:12px;color:white;text-decoration:none;font-size:20px;font-weight:bold;background:linear-gradient(120deg,#490b17,#18080c)}
+a:hover{background:#721526}
+footer{color:#d6aab0;font-size:13px;margin-top:30px}
 </style>
 </head>
 <body>
 <main>
-<div class="logo">HH</div>
-<h1>Hazbin Hotel</h1>
-<p>בדיבוב לעברית<br>כל העדכונים והסרטונים במקום אחד</p>
-<div id="links"></div>
-<footer>עמוד מעריצים עצמאי, שאינו קשור רשמית ליוצרי הסדרה.</footer>
+<h1>Hazbin Hotel בעברית</h1>
+<p>ברוכים הבאים לפרויקט הדיבוב לעברית שלנו! 🎙️</p>
+<p>עקבו אחרינו כדי לראות עדכונים, סרטונים וחדשות על הדיבוב.</p>
+<div class="links">
+<a href="https://www.tiktok.com/@hazbin.hotel486" target="_blank" rel="noopener">🎵 טיקטוק</a>
+<a href="https://www.instagram.com/hazbinhotelmdwbb/" target="_blank" rel="noopener">📸 אינסטגרם</a>
+<a href="https://www.youtube.com/@JonatanHayou-w5e5k" target="_blank" rel="noopener">▶️ יוטיוב</a>
+</div>
+<footer>Hazbin Hotel — פרויקט דיבוב מעריצים בעברית</footer>
 </main>
-<script>
-const profiles={
-tiktok:{label:"TikTok",url:"https://www.tiktok.com/@hazbin.hotel486"},
-instagram:{label:"Instagram",url:"https://www.instagram.com/hazbinhotelmdwbb/"},
-youtube:{label:"YouTube",url:"https://youtube.com/@jonatanhayou-w5e5k?si=bsDRXhW01_W3TM3R"}
-};
-const params=new URLSearchParams(location.search);
-const source=(params.get("from")||"").toLowerCase();
-const links=document.getElementById("links");
-Object.entries(profiles).forEach(([key,p])=>{
-if(key===source)return;
-const a=document.createElement("a");
-a.href=p.url;
-a.target="_blank";
-a.rel="noopener noreferrer";
-a.textContent="מעבר ל־"+p.label;
-links.appendChild(a);
-});
-</script>
 </body>
 </html>
